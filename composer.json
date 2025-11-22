@@ -1,0 +1,74 @@
+{
+    "name": "gboquizosanchez/icu-i18n",
+    "description": "Advanced ICU Translation support for Laravel with regional fallback strategies.",
+    "keywords": [
+        "laravel",
+        "icu",
+        "translation",
+        "i18n"
+    ],
+    "homepage": "https://github.com/gboquizosanchez/icu-translation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Germán Boquizo Sánchez",
+            "email": "germanboquizosanchez@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "ext-intl": "*",
+        "spatie/laravel-package-tools": "^1.16",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/translation": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "hermes/dependencies": "^1.2",
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.14",
+        "nunomaduro/collision": "^8.8",
+        "orchestra/testbench": "^10.0.0||^9.0.0",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-arch": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "spatie/laravel-ray": "^1.35"
+    },
+    "autoload": {
+        "psr-4": {
+            "Boquizo\\I18n\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Boquizo\\I18n\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@composer run prepare",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Boquizo\\I18n\\I18nServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
