@@ -7,14 +7,17 @@ namespace Boquizo\I18n;
 use DateTimeInterface;
 use Illuminate\Support\Str;
 use Illuminate\Translation\Translator;
+use Illuminate\Support\Facades\Config;
 use MessageFormatter;
 
 final class IcuTranslator extends Translator
 {
     /**
      * @param  string  $key
+     * @param  array<string, mixed>  $replace
      * @param  string|null  $locale
      * @param  bool  $fallback
+     * @return array<string, mixed>|string
      */
     public function get(
         $key,
@@ -26,19 +29,21 @@ final class IcuTranslator extends Translator
 
         [$namespace] = $this->parseKey($key);
 
-        $namespaces = collect(config('icu.regionals.namespaces'));
+        $namespaces = Config::collection('icu.regionals.namespaces');
 
-        $files = collect(config('icu.regionals.files'));
+        $files = Config::collection('icu.regionals.files');
 
         if (! $namespaces->contains($namespace)
             || $files->contains(fn (string $file): bool => Str::startsWith($key, $file))
         ) {
-            $locale = preg_split('/[-_]/', $locale)[0];
+            $parts = preg_split('/[-_]/', $locale);
+            $locale = is_array($parts) ? $parts[0] : $locale;
         }
 
         $line = parent::get($key, $replace, $locale, $fallback);
 
         if (is_array($line)) {
+            /** @var array<string, mixed> $line */
             return $line;
         }
 
