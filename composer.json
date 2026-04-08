@@ -1,13 +1,8 @@
 {
     "name": "gboquizosanchez/icu-i18n",
     "description": "Advanced ICU Translation support for Laravel with regional fallback strategies.",
-    "keywords": [
-        "laravel",
-        "icu",
-        "translation",
-        "i18n"
-    ],
-    "homepage": "https://github.com/gboquizosanchez/icu-translation",
+    "keywords": ["laravel", "icu", "translation", "i18n"],
+    "homepage": "https://github.com/gboquizosanchez/icu-i18n",
     "license": "MIT",
     "authors": [
         {
@@ -20,15 +15,15 @@
         "php": "^8.3",
         "ext-intl": "*",
         "spatie/laravel-package-tools": "^1.16",
-        "illuminate/support": "^11.0|^12.0",
-        "illuminate/translation": "^11.0|^12.0"
+        "illuminate/support": "^12.0|^13.0",
+        "illuminate/translation": "^12.0|^13.0"
     },
     "require-dev": {
         "hermes/dependencies": "^1.2",
         "larastan/larastan": "^3.0",
         "laravel/pint": "^1.14",
         "nunomaduro/collision": "^8.8",
-        "orchestra/testbench": "^10.0.0||^9.0.0",
+        "orchestra/testbench": "^10.0.0|^11.0.0",
         "pestphp/pest": "^4.0",
         "pestphp/pest-plugin-arch": "^4.0",
         "pestphp/pest-plugin-laravel": "^4.0",

@@ -9,7 +9,7 @@
 [![Latest Stable Version](https://img.shields.io/packagist/v/gboquizosanchez/icu-i18n.svg)](https://packagist.org/packages/gboquizosanchez/icu-i18n)
 [![Total Downloads](https://img.shields.io/packagist/dt/gboquizosanchez/icu-i18n.svg)](https://packagist.org/packages/gboquizosanchez/icu-i18n)
 [![PHP](https://img.shields.io/badge/PHP-%5E8.3-777BB4?logo=php&logoColor=white)](https://packagist.org/packages/gboquizosanchez/icu-i18n)
-[![Laravel](https://img.shields.io/badge/Laravel-11%20%7C%2012-FF2D20?logo=laravel&logoColor=white)](https://packagist.org/packages/gboquizosanchez/icu-i18n)
+[![Laravel](https://img.shields.io/badge/Laravel-12%20%7C%2013-FF2D20?logo=laravel&logoColor=white)](https://packagist.org/packages/gboquizosanchez/icu-i18n)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22C55E.svg)](LICENSE.md)
 [![PHPStan](https://img.shields.io/badge/PHPStan-Level%20Max-blue)](https://phpstan.org/)
 [![Tests](https://img.shields.io/badge/Tests-Pest%20v4-9C27B0)](https://pestphp.com/)
