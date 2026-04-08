@@ -59,7 +59,7 @@ Publish the configuration file:
 php artisan vendor:publish --provider="Boquizo\IcuI18n\I18nServiceProvider"
 ```
 
-**Requirements:** PHP ^8.3 · ext-intl · Laravel 11 or 12
+**Requirements:** PHP ^8.3 · ext-intl · Laravel 12 or 13
 
 ---
 
